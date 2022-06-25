@@ -3,9 +3,11 @@ package com.logging.controlleradvicelogging.controller;
 import com.logging.controlleradvicelogging.service.BarService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/bar")
+@RestController
+@RequestMapping("/bar")
 public class BarController {
 
     private final BarService barService;
@@ -14,7 +16,7 @@ public class BarController {
         this.barService = barService;
     }
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<String> getBar() {
         return ResponseEntity.ok(barService.getBar());
     }

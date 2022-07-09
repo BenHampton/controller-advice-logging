@@ -1,3 +1,21 @@
 management:
   security:
     enabled: false
+
+logging:
+  controller:
+    exclusions:
+      uri-ends-with:
+        - health
+        - actuator
+        - test-health
+    request:
+      enable: true
+      uri: true
+      parameters: true
+      headers: true
+      body: true
+    response:
+      enable: true
+      headers: true
+      body: true

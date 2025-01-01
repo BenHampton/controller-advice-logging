@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "3db3c3bb-9282-4ec5-90d3-1a8ffd52c682",
+		"name": "logging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18986948"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"foo\": \"foo-test\",\n    \"bar\": \"bar-test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/logging/foo-bar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"foo-bar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/{foo}/test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"foo\": \"foo-test\",\n    \"bar\": \"bar-test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/logging/testOne/test?bar=testTwo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"testOne",
+						"test"
+					],
+					"query": [
+						{
+							"key": "bar",
+							"value": "testTwo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "not-found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging/test/not-found",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"test",
+						"not-found"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bad-request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging/test/bad-request",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"test",
+						"bad-request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forbidden",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging/test/forbidden",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"test",
+						"forbidden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "internal-server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging/test/internal-server",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"test",
+						"internal-server"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conflict",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/logging/test/conflict",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"logging",
+						"test",
+						"conflict"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

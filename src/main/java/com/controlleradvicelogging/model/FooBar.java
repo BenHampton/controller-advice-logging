@@ -1,4 +1,4 @@
-package com.logging.controlleradvicelogging.model;
+package com.controlleradvicelogging.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class FooBar {
 
-    private String requestParam;
+    private String foo;
 
-    private String pathVariable;
+    private String bar;
 }
